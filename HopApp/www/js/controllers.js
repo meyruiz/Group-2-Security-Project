@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('MapCtrl', function($scope) {
-  initMap();
+  initiateMap();
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
