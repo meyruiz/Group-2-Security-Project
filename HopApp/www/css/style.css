@@ -2,3 +2,21 @@
 #map{
 	height: 100%;
 }
+
+.tabs{
+	background-color: #D6D2C4 !important; /* sand macquarie */
+}
+
+ion-tabs.tabs-color-active-assertive .tab-item.tab-item-active,
+ion-tabs.tabs-color-active-assertive .tab-item.active,
+ion-tabs.tabs-color-active-assertive .tab-item.activated{
+	color:  #A6192E !important;
+}
+
+.bar.bar-assertive{
+	background-color: #D6D2C4 !important;
+}
+
+.bar.bar-assertive .title{
+	color: #373A36 !important;
+}

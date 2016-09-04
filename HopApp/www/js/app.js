@@ -18,9 +18,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
+      StatusBar.overlaysWebView(false);
+      StatusBar.backgroundColorByHexString('#D6D2C4');
       StatusBar.styleDefault();
     }
   });
+})
+
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -50,31 +56,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.timetable', {
+      url: '/timetable',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-timetable': {
+          templateUrl: 'templates/tab-timetable.html',
+          controller: 'TimeTableCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.about', {
+    url: '/about',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-about': {
+        templateUrl: 'templates/tab-about.html',
+        controller: 'AboutCtrl'
       }
     }
   });
