@@ -6,6 +6,7 @@ angular.module('starter.services', [])
 .factory('MarkersFactory', function() {
 	var Json = [
    {
+      "ID": 1,
       "Name":"Macquarie University Station",
       "Color": "#A6192E",
       "Lat":"-33.7770040000",
@@ -30,6 +31,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 2,
       "Name":"EMC Building",
       "Color": "#A6192E",
       "Lat":"-33.7749620000",
@@ -82,6 +84,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 3,
       "Name":"Macquarie University Hospital",
       "Color": "#A6192E",
       "Lat":"-33.7734030000",
@@ -130,6 +133,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 4,
       "Name":"MGSM",
       "Color": "#A6192E",
       "Lat":"-33.7716780000",
@@ -178,6 +182,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 5,
       "Name":"W19F",
       "Color": "#A6192E",
       "Lat":"-33.7688690000",
@@ -210,6 +215,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 6,
       "Name":"MU Village Administration Office",
       "Color": "#A6192E",
       "Lat":"-33.7705040000",
@@ -246,6 +252,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 7,
       "Name":"Dayman Place Apartments",
       "Color": "#A6192E",
       "Lat":"-33.7722890000",
@@ -318,6 +325,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 8,
       "Name":"Y3A (Hadenfeld Avenue)",
       "Color": "#A6192E",
       "Lat":"-33.7765070000",
@@ -430,6 +438,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 9,
       "Name":"MUSE (Library Avenue)",
       "Color": "#A6192E",
       "Lat":"-33.7736510000",
@@ -466,6 +475,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 10,
       "Name":"X8 Car Park (End of Wally's Walk)",
       "Color": "#A6192E",
       "Lat":"-33.7736979298",
@@ -582,6 +592,7 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 11,
       "Name":"University Avenue (Outside AHH)",
       "Color": "#A6192E",
       "Lat":"-33.7769620000",
