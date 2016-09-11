@@ -1,0 +1,54 @@
+$button-border-radius: 0px;
+$item-divider-bg: white;
+
+ion-content .item{
+	h1{
+		margin: 0;
+    font-size: 20px;
+	}
+	p{
+		color: black;
+	}
+}
+
+.item-options .button{
+	width: 19vw;
+	text-align: center;
+	white-space: normal;
+	line-height: 1em;
+	font-size: 14px;
+	padding: 0 6px;
+	p{
+		color:white;
+		margin:0 auto;
+	}
+}
+
+.floatright{
+	position: absolute;
+	right: 20px;
+	top: 40px;
+}
+
+/* Empty. Add your own CSS if you like */
+#map{
+  height: 100%;
+}
+
+.tabs{
+  background-color: #D6D2C4 !important; /* sand macquarie */
+}
+
+ion-tabs.tabs-color-active-assertive .tab-item.tab-item-active,
+ion-tabs.tabs-color-active-assertive .tab-item.active,
+ion-tabs.tabs-color-active-assertive .tab-item.activated{
+  color:  #A6192E !important;
+}
+
+.bar.bar-assertive{
+  background-color: #D6D2C4 !important;
+}
+
+.bar.bar-assertive .title{
+  color: #373A36 !important;
+}

@@ -15,13 +15,9 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$assertive:                       #A6192E !default; /* red macquarie */
-$dark:                        	  #373A36 !default; /* charcole macquarie */
-$calm:                            #D6D2C4 !default; /* sand macquarie */
-
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
+@import "overides";
 @import "www/lib/ionic/scss/ionic";
-

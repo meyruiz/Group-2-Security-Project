@@ -5,15 +5,21 @@ angular.module('starter.controllers', [])
   mapupdate(MarkersFactory.locations()); 
 })
 
-.controller('TimeTableCtrl', function($scope) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
+.controller('TimeTableCtrl', function($scope,TimeTable,MarkersFactory) {
+  TimeTable().success(function(data){
+  	$scope.timetable = data.TimeTable;
+  });
+  var locations = MarkersFactory.locations();
+  $scope.locations = locations;
+  // returns 
+  $scope.location = function (id){
+  	for(var i = 0; i < locations.length; i++){
+  		if (locations[i].ID == id){
+  			return locations[i];
+  			break;
+  		}
+  	}
+  }
 })
 
 .controller('AboutCtrl', function($scope) {

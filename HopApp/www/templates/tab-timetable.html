@@ -1,5 +1,13 @@
 <ion-view view-title="Time Table">
   <ion-content>
-   
+    <ion-list>
+	  <ion-item ng-repeat="stop in timetable">
+	   {{location(stop.LocationID).Name}} 
+	   <p am-time-ago="stop.Time | amParse:'HH:mm'"></p>
+	   <div class="floatright">
+        <button class="button button-small status button-assertive">ROUND {{stop.RunNo}}</button>
+        </div>
+	  </ion-item>
+	</ion-list>
   </ion-content>
 </ion-view>

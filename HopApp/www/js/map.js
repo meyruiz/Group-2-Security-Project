@@ -2,6 +2,7 @@
   var markers = []; // array used to store markers
   var paths = []; // array used to store paths
   var me;
+  var buslocation; 
   var campusCoords = [
     {lat: -33.764072383997075, lng: 151.12569787310792},
     {lat: -33.76378696794087, lng: 151.09578587817384},
@@ -32,7 +33,6 @@
     });
 
     //GeoLocation
-
     function success(pos) {
       me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
       myloc.setPosition(me);
@@ -77,6 +77,7 @@
           marker = new google.maps.Marker({
           title: locations[i].Name,
           position: new google.maps.LatLng(locations[i].Lat, locations[i].Lng),
+          icon: 'http://www.gpsvisualizer.com/google_maps/icons/circle/' + locations[i].Icon
         });
         markers.push(marker);
         marker.setMap(map);
