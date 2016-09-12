@@ -1,5 +1,6 @@
 $button-border-radius: 0px;
 $item-divider-bg: white;
+$assertive:  #A6192E;
 
 ion-content .item{
 	h1{
@@ -9,6 +10,10 @@ ion-content .item{
 	p{
 		color: black;
 	}
+}
+
+ion-content .button p{
+	color:white;
 }
 
 .item-options .button{
@@ -27,10 +32,9 @@ ion-content .item{
 .floatright{
 	position: absolute;
 	right: 20px;
-	top: 40px;
+	top: 20%;
 }
 
-/* Empty. Add your own CSS if you like */
 #map{
   height: 100%;
 }
@@ -39,11 +43,7 @@ ion-content .item{
   background-color: #D6D2C4 !important; /* sand macquarie */
 }
 
-ion-tabs.tabs-color-active-assertive .tab-item.tab-item-active,
-ion-tabs.tabs-color-active-assertive .tab-item.active,
-ion-tabs.tabs-color-active-assertive .tab-item.activated{
-  color:  #A6192E !important;
-}
+
 
 .bar.bar-assertive{
   background-color: #D6D2C4 !important;
