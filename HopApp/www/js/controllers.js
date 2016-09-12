@@ -1,14 +1,44 @@
 angular.module('starter.controllers', [])
 
-.controller('MapCtrl',function($scope,MarkersFactory){
+.controller('MapCtrl',function($scope,$interval,MarkersFactory,TimeTable){
   initiateMap();
-  mapupdate(MarkersFactory.locations()); 
+  var locations = MarkersFactory.locations();
+  mapupdate(locations); 
+
+  $interval(function(){
+    TimeTable().success(function(data){
+      $scope.nextStop = isNextStop(data.TimeTable);
+    })
+  },1000);
+  // returns 
+  $scope.locations = locations;
+  $scope.location = function (id){
+    for(var i = 0; i < locations.length; i++){
+      if (locations[i].ID == id){
+        return locations[i];
+        break;
+      }
+    }
+  }
+  function isNextStop(stops){
+  for(var i = 0; i < stops.length; i++){
+      if (moment(stops[i].Time,"HH:mm:ss").isAfter(new Date())){
+        break;
+      }
+    }
+    return stops[i];
+  } 
 })
 
-.controller('TimeTableCtrl', function($scope,TimeTable,MarkersFactory) {
-  TimeTable().success(function(data){
-  	$scope.timetable = data.TimeTable;
-  });
+.controller('TimeTableCtrl', function($scope,$interval,TimeTable,MarkersFactory) {
+
+  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
+
+  $interval(function(){
+    TimeTable().success(function(data){
+      $scope.timetable = data.TimeTable;
+    });
+  },1000);
   var locations = MarkersFactory.locations();
   $scope.locations = locations;
   // returns 

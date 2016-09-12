@@ -79,4 +79,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/map');
 
+})
+
+.filter('isFuture', function() {
+  return function(items, dateFieldName) {
+    return items.filter(function(item){
+      return moment(item[dateFieldName || 'Time'],"HH:mm:ss").isAfter(new Date());
+    })
+  }
 });
