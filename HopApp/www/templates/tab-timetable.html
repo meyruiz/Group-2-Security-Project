@@ -1,11 +1,12 @@
 <ion-view view-title="Time Table">
   <ion-content>
     <ion-list>
-     <ion-item ng-if="timetable.length == 1">
+     <ion-item ng-if="timetable.length <= 1">
 	   Loading....
 	  </ion-item>
-	  <ion-item ng-if="timetable.length != 0" ng-repeat="stop in timetable | isFuture | orderBy:'stop.Time' | limitTo:11">
-	   {{location(stop.LocationID).Name}} 
+	  <ion-item ng-if="timetable.length != 0" ng-repeat="stop in timetable | isFuture | orderBy:'stop.Time' | limitTo:11" ui-sref="{{timetable(stop.ID)}}">
+	   {{location(stop.LocationID).Name}}<br> 
+	   <span>{{stop.Time | amParse:'HH:mm:ss' |  amDateFormat:'h:mma'}}</span>
 	   <div class="floatright">
         <button class="button button-small status button-assertive"><p am-time-ago="stop.Time | amParse:'HH:mm:ss'"></p></button>
         </div>
