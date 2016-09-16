@@ -1,19 +1,75 @@
 angular.module('starter.controllers', [])
 
-.controller('MapCtrl',function($scope,MarkersFactory){
+.controller('MapCtrl',function($scope,$interval,MarkersFactory,TimeTable){
   initiateMap();
-  mapupdate(MarkersFactory.locations()); 
+  var locations = MarkersFactory.locations();
+  mapupdate(locations); 
+  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
+  $interval(function(){
+    TimeTable().success(function(data){
+      $scope.nextStop = isNextStop(data.TimeTable);
+    })
+  },1000);
+  // returns 
+  $scope.locations = locations;
+  $scope.location = function (id){
+    for(var i = 0; i < locations.length; i++){
+      if (locations[i].ID == id){
+        return locations[i];
+        break;
+      }
+    }
+  }
+  function isNextStop(stops){
+  for(var i = 0; i < stops.length; i++){
+      if (moment(stops[i].Time,"HH:mm:ss").isAfter(new Date())){
+        break;
+      }
+    }
+    return stops[i];
+  } 
 })
 
-.controller('TimeTableCtrl', function($scope) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('TimeTableCtrl', function($scope,$interval,TimeTable,MarkersFactory) {
 
+  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
+
+  $interval(function(){
+    TimeTable().success(function(data){
+      $scope.timetable = data.TimeTable;
+    });
+  },1000);
+  var locations = MarkersFactory.locations();
+  $scope.locations = locations;
+  // returns 
+  $scope.location = function (id){
+  	for(var i = 0; i < locations.length; i++){
+  		if (locations[i].ID == id){
+  			return locations[i];
+  			break;
+  		}
+  	}
+  }
+})
+
+.controller('LocationCtrl',function($scope,$interval,$stateParams,TimeTable,MarkersFactory){
+  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
+  $interval(function(){
+    TimeTable().success(function(data){
+      $scope.timetable = data.TimeTable;
+    });
+  },1000);
+  var locations = MarkersFactory.locations();
+  $scope.locations = locations;
+  $scope.id = $stateParams.id;
+  $scope.location = function (id){
+    for(var i = 0; i < locations.length; i++){
+      if (locations[i].ID == id){
+        return locations[i];
+        break;
+      }
+    }
+  }
 })
 
 .controller('AboutCtrl', function($scope) {

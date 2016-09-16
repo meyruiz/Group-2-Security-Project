@@ -3,11 +3,26 @@ var api = "http://www.joelhenry.me/hop/"
 
 angular.module('starter.services', [])
 
+.factory('TimeTable', ['$http', function($http) { 
+   var promise = null;
+   return function(){
+      if (promise){
+         return promise;
+      }
+      else{
+         promise = $http.get('http://www.joelhenry.me/hop/');
+         return promise; 
+      }
+   }
+}])
+
 .factory('MarkersFactory', function() {
 	var Json = [
    {
+      "ID": 1,
       "Name":"Macquarie University Station",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7770040000",
       "Lng":"151.1176940000",
       "Paths":[
@@ -30,8 +45,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 2,
       "Name":"EMC Building",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7749620000",
       "Lng":"151.1191750000",
       "Paths":[
@@ -82,8 +99,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 3,
       "Name":"Macquarie University Hospital",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7734030000",
       "Lng":"151.1179410000",
       "Paths":[
@@ -130,8 +149,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 4,
       "Name":"MGSM",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7716780000",
       "Lng":"151.1167560000",
       "Paths":[
@@ -178,8 +199,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 5,
       "Name":"W19F",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7688690000",
       "Lng":"151.1111900000",
       "Paths":[
@@ -210,8 +233,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 6,
       "Name":"MU Village Administration Office",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7705040000",
       "Lng":"151.1086500000",
       "Paths":[
@@ -246,8 +271,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 7,
       "Name":"Dayman Place Apartments",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7722890000",
       "Lng":"151.1016870000",
       "Paths":[
@@ -318,8 +345,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 8,
       "Name":"Y3A (Hadenfeld Avenue)",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7765070000",
       "Lng":"151.1082610000",
       "Paths":[
@@ -430,8 +459,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 9,
       "Name":"MUSE (Library Avenue)",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7736510000",
       "Lng":"151.1122920000",
       "Paths":[
@@ -466,8 +497,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 10,
       "Name":"X8 Car Park (End of Wally's Walk)",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7736979298",
       "Lng":"151.1097682338",
       "Paths":[
@@ -582,8 +615,10 @@ angular.module('starter.services', [])
       ]
    },
    {
+      "ID": 11,
       "Name":"University Avenue (Outside AHH)",
       "Color": "#A6192E",
+      "Icon" : "white.png",
       "Lat":"-33.7769620000",
       "Lng":"151.1117990000",
       "Paths":[

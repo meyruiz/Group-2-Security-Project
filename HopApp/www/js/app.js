@@ -66,6 +66,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       }
     })
 
+  .state('tab.location',{
+        url:'/location/:id',
+        views: {
+          'tab-timetable': {
+            controller: 'LocationCtrl',
+            templateUrl: 'templates/location.html'
+          }
+        }
+      })
+
   .state('tab.about', {
     url: '/about',
     views: {
