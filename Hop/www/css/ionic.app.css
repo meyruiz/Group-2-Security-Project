@@ -15,25 +15,30 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.textwrap {
+  width: 60%;
+  overflow: initial; }
+
 ion-content .item h1 {
   margin: 0;
   font-size: 20px; }
 
 ion-content .item p {
-  color: black; }
+  color: black;
+  white-space: normal; }
 
 ion-content .button p {
   color: white;
-  width: 120px; }
+  width: 110px; }
 
 .item-options .button {
   width: 19vw;
   text-align: center;
   white-space: normal;
   line-height: 1em;
-  font-size: 14px;
   padding: 0 6px; }
   .item-options .button p {
+    font-size: 12px !important;
     color: white;
     margin: 0 auto; }
 

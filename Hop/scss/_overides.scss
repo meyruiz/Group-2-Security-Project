@@ -4,19 +4,26 @@ $assertive:  #A6192E;
 
 $button-assertive-active-bg: #A6192E;
 
+.textwrap{
+	width: 60%;
+	overflow: initial;
+}
+
 ion-content .item{
 	h1{
 		margin: 0;
     font-size: 20px;
 	}
 	p{
+		
 		color: black;
+		white-space: normal;
 	}
 }
 
 ion-content .button p{
 	color:white;
-	width: 120px;
+	width: 110px;
 }
 
 .item-options .button{
@@ -24,9 +31,9 @@ ion-content .button p{
 	text-align: center;
 	white-space: normal;
 	line-height: 1em;
-	font-size: 14px;
 	padding: 0 6px;
 	p{
+		font-size: 12px !important;
 		color:white;
 		margin:0 auto;
 	}
