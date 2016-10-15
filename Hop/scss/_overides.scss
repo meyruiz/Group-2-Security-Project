@@ -1,0 +1,70 @@
+$button-border-radius: 0px;
+$item-divider-bg: white;
+$assertive:  #A6192E;
+
+$button-assertive-active-bg: #A6192E;
+
+.textwrap{
+	width: 60%;
+	overflow: initial;
+}
+
+ion-content .item{
+	h1{
+		margin: 0;
+    font-size: 20px;
+	}
+	p{
+		
+		color: black;
+		white-space: normal;
+	}
+}
+
+ion-content .button p{
+	color:white;
+	width: 110px;
+}
+
+.item-options .button{
+	width: 19vw;
+	text-align: center;
+	white-space: normal;
+	line-height: 1em;
+	padding: 0 6px;
+	p{
+		font-size: 12px !important;
+		color:white;
+		margin:0 auto;
+	}
+}
+
+.menuright{
+	position: absolute;
+	right: 10px;
+	top: 40%;
+}
+
+.floatright{
+	position: absolute;
+	right: 30px;
+	top: 30%;
+}
+
+#map{
+  height: 100%;
+}
+
+.tabs{
+  background-color: #D6D2C4 !important; /* sand macquarie */
+}
+
+
+
+.bar.bar-assertive{
+  background-color: #D6D2C4 !important;
+}
+
+.bar.bar-assertive .title{
+  color: #373A36 !important;
+}
