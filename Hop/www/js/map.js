@@ -2,7 +2,7 @@
   var markers = []; // array used to store markers
   var paths = []; // array used to store paths
   var me;
-  var buslocation; 
+  var buslocation;
   var campusCoords = [
     {lat: -33.764072383997075, lng: 151.12569787310792},
     {lat: -33.76378696794087, lng: 151.09578587817384},
@@ -23,7 +23,7 @@
 
     //mylocation
     var myloc = new google.maps.Marker({
-      title: "You Are Here",  
+      title: "You Are Here",
       clickable: true,
       icon: new google.maps.MarkerImage('location.png',
             new google.maps.Size(50,50)),
@@ -48,7 +48,7 @@
 
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(success,error,options);
-      navigator.geolocation.getCurrentPosition(CenterMap);  
+      navigator.geolocation.getCurrentPosition(CenterMap);
     }
 
   }
@@ -67,7 +67,7 @@
   }
 
 
-  function addmarkers(locations) {  
+  function addmarkers(locations) {
       // clear markers
       remove(markers);
       markers = [];
@@ -77,7 +77,7 @@
           marker = new google.maps.Marker({
           title: locations[i].Name,
           position: new google.maps.LatLng(locations[i].Lat, locations[i].Lng),
-          icon: 'http://www.gpsvisualizer.com/google_maps/icons/circle/' + locations[i].Icon
+          icon: 'img/' + locations[i].Icon
         });
 
       var infowindow = new google.maps.InfoWindow({maxWidth: 400, zIndex: 999});
@@ -87,7 +87,7 @@
         return function() {
           infowindow.setContent(locations[i].Name);
           infowindow.open(map, marker);
-          }       
+          }
         })(marker, i));
 
         markers.push(marker);
@@ -123,7 +123,7 @@
       map.setCenter(new google.maps.LatLng(-33.776059,151.113467));
       var draggablemarker = new google.maps.Marker({
         draggable: true,
-        position: new google.maps.LatLng(-33.776059,151.113467), 
+        position: new google.maps.LatLng(-33.776059,151.113467),
         map: map,
         animation: google.maps.Animation.DROP,
         title: "New Marker"
