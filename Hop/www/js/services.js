@@ -3,7 +3,7 @@ var api = "http://www.joelhenry.me/hop/"
 
 angular.module('starter.services', [])
 
-.factory('TimeTable', ['$http', function($http) { 
+.factory('TimeTable', ['$http', function($http) {
    var promise = null;
    return function(){
       if (promise){
@@ -11,7 +11,7 @@ angular.module('starter.services', [])
       }
       else{
          promise = $http.get('http://www.joelhenry.me/hop/');
-         return promise; 
+         return promise;
       }
    }
 }])
@@ -21,8 +21,8 @@ angular.module('starter.services', [])
    {
       "ID": 1,
       "Name":"Macquarie University Station",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7770040000",
       "Lng":"151.1176940000",
       "Paths":[
@@ -47,8 +47,8 @@ angular.module('starter.services', [])
    {
       "ID": 2,
       "Name":"EMC Building",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7749620000",
       "Lng":"151.1191750000",
       "Paths":[
@@ -101,8 +101,8 @@ angular.module('starter.services', [])
    {
       "ID": 3,
       "Name":"Macquarie University Hospital",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7734030000",
       "Lng":"151.1179410000",
       "Paths":[
@@ -151,8 +151,8 @@ angular.module('starter.services', [])
    {
       "ID": 4,
       "Name":"MGSM",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7716780000",
       "Lng":"151.1167560000",
       "Paths":[
@@ -201,8 +201,8 @@ angular.module('starter.services', [])
    {
       "ID": 5,
       "Name":"W19F",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7688690000",
       "Lng":"151.1111900000",
       "Paths":[
@@ -235,8 +235,8 @@ angular.module('starter.services', [])
    {
       "ID": 6,
       "Name":"MU Village Administration Office",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",
       "Lng":"151.1086500000",
       "Paths":[
@@ -273,8 +273,8 @@ angular.module('starter.services', [])
    {
       "ID": 7,
       "Name":"Dayman Place",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7722890000",
       "Lng":"151.1016870000",
       "Paths":[
@@ -347,8 +347,8 @@ angular.module('starter.services', [])
    {
       "ID": 8,
       "Name":"Y3A",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",
       "Lng":"151.1082610000",
       "Paths":[
@@ -461,8 +461,8 @@ angular.module('starter.services', [])
    {
       "ID": 9,
       "Name":"MUSE",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7736510000",
       "Lng":"151.1122920000",
       "Paths":[
@@ -470,7 +470,7 @@ angular.module('starter.services', [])
             "lat": -33.77178717664394,
             "lng": 151.11037977742387
          },
-         {  
+         {
             "lat": -33.77278157625758,
             "lng": 151.1093578557892
          },
@@ -499,8 +499,8 @@ angular.module('starter.services', [])
    {
       "ID": 10,
       "Name":"X8 Car Park",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7736979298",
       "Lng":"151.1097682338",
       "Paths":[
@@ -561,7 +561,7 @@ angular.module('starter.services', [])
             "lng": 151.10869803237154
          },
          {
-            "lat": -33.77528313142142, 
+            "lat": -33.77528313142142,
             "lng": 151.10895820664598
          },
          {
@@ -569,7 +569,7 @@ angular.module('starter.services', [])
             "lng": 151.10928007172777
          },
          {
-            "lat": -33.77529873804254, 
+            "lat": -33.77529873804254,
             "lng": 151.10956438588335
          },
          {
@@ -585,15 +585,15 @@ angular.module('starter.services', [])
             "lng": 151.10984870003892
          },
          {
-            "lat": -33.77640903036309, 
+            "lat": -33.77640903036309,
             "lng": 151.11037173079683
          },
          {
-            "lat": -33.776484832928475, 
+            "lat": -33.776484832928475,
             "lng": 151.11069359587862
          },
          {
-            "lat": -33.7766297494109, 
+            "lat": -33.7766297494109,
             "lng": 151.11095377015306
          },
          {
@@ -601,15 +601,15 @@ angular.module('starter.services', [])
              "lng": 151.11125685977174
          },
          {
-            "lat": -33.77693741743775, 
+            "lat": -33.77693741743775,
             "lng": 151.11144997882081
          },
          {
-            "lat": -33.776955253231506, 
+            "lat": -33.776955253231506,
             "lng": 151.11160286473466
          },
          {
-            "lat": -33.7769620000, 
+            "lat": -33.7769620000,
             "lng": 151.1117990000
          }
       ]
@@ -617,13 +617,13 @@ angular.module('starter.services', [])
    {
       "ID": 11,
       "Name":"University Avenue",
-      "Color": "#A6192E",
-      "Icon" : "white.png",
+      "Color": "#FF8200",
+      "Icon" : "magentaMarker.png",
       "Lat":"-33.7769620000",
       "Lng":"151.1117990000",
       "Paths":[
          {
-            "lat": -33.7769620000, 
+            "lat": -33.7769620000,
             "lng": 151.1117990000
          },
          {
