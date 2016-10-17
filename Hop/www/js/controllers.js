@@ -1,17 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('MapCtrl',function($scope,$interval,MarkersFactory,TimeTable){
+.controller('MapCtrl',function($scope,$interval,MarkersFactory,TimeTableFactory){
   initiateMap();
   var locations = MarkersFactory.locations();
   mapupdate(locations); 
-  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
-  $interval(function(){
-    TimeTable().success(function(data){
-      $scope.nextStop = isNextStop(data.TimeTable);
-    })
-  },1000);
   // returns 
   $scope.locations = locations;
+
+  var timetable = TimeTableFactory.timetable();
+  $scope.timetable = timetable;
+
   $scope.location = function (id){
     for(var i = 0; i < locations.length; i++){
       if (locations[i].ID == id){
@@ -27,20 +25,16 @@ angular.module('starter.controllers', [])
       }
     }
     return stops[i];
-  } 
+  }
+  $scope.nextStop = isNextStop(timetable); 
 })
 
-.controller('TimeTableCtrl', function($scope,$interval,TimeTable,MarkersFactory) {
-
-  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
-
-  $interval(function(){
-    TimeTable().success(function(data){
-      $scope.timetable = data.TimeTable;
-    });
-  },1000);
+.controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory) {
   var locations = MarkersFactory.locations();
   $scope.locations = locations;
+
+  var timetable = TimeTableFactory.timetable();
+  $scope.timetable = timetable;
   // returns 
   $scope.location = function (id){
   	for(var i = 0; i < locations.length; i++){
@@ -50,17 +44,14 @@ angular.module('starter.controllers', [])
   		}
   	}
   }
+
 })
 
-.controller('LocationCtrl',function($scope,$interval,$stateParams,TimeTable,MarkersFactory){
-  $scope.timetable = [{"LocationID":"0","Time":"00:00:00","RunNo":"0"}];
-  $interval(function(){
-    TimeTable().success(function(data){
-      $scope.timetable = data.TimeTable;
-    });
-  },1000);
+.controller('LocationCtrl',function($scope,$interval,$stateParams,TimeTableFactory,MarkersFactory){
   var locations = MarkersFactory.locations();
   $scope.locations = locations;
+  var timetable = TimeTableFactory.timetable();
+  $scope.timetable = timetable;
   $scope.id = $stateParams.id;
   $scope.location = function (id){
     for(var i = 0; i < locations.length; i++){
