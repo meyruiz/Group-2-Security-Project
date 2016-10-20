@@ -67,10 +67,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     })
 
   .state('tab.location',{
-        url:'/location/:id',
+        url:'/timetable/:id',
         views: {
           'tab-timetable': {
-            controller: 'LocationCtrl',
+            controller: 'TimeTableCtrl',
             templateUrl: 'templates/location.html'
           }
         }
