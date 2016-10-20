@@ -1,6 +1,3 @@
-/*var api = "http://hop.dev/";*/
-var api = "http://www.joelhenry.me/hop/"
-
 angular.module('starter.services', [])
 
 .factory('TimeTableFactory', ['$http', function($http) {
@@ -961,7 +958,7 @@ angular.module('starter.services', [])
 }])
 
 .factory('MarkersFactory', function() {
-	var Json = [
+   var Json = [
    {
       "ID": 1,
       "Name":"Macquarie University Station",
@@ -1599,9 +1596,9 @@ angular.module('starter.services', [])
 ];
 
 return {
-	locations: function(){
-		return Json;
-	}
+   locations: function(){
+      return Json;
+   }
 }
 
 });

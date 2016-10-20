@@ -8,7 +8,7 @@
 	  orderBy:'stop.Time' | limitTo:11" ui-sref="tab.location({id:stop.LocationID})">
 	   <b><p class="textwrap">{{location(stop.LocationID).Name}}</p></b> 
 	   <span>{{stop.Time | amParse:'HH:mm:ss' |  amDateFormat:'h:mma'}}</span>
-	   <div ng-if="inService()" class="floatright">
+	   <div class="floatright">
         <button class="button button-small status button-assertive"><p am-time-ago="stop.Time | amParse:'HH:mm:ss'"></p></button>
         </div>
         <i class="icon ion-chevron-right icon-accessory menuright"></i>
