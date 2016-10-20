@@ -11,13 +11,13 @@
   ];
 
   function initiateMap() {
-  	var DefaultView = new google.maps.LatLng(-33.77286630035477,151.11149289416505);
-  	var opts = {
-		    	center: DefaultView,
-		    	zoom: 16,
-		    	streetViewControl: false,
-		    	disableDefaultUI: true,
-		    	zoomControl: true,
+    var DefaultView = new google.maps.LatLng(-33.77286630035477,151.11149289416505);
+    var opts = {
+          center: DefaultView,
+          zoom: 16,
+          streetViewControl: false,
+          disableDefaultUI: true,
+          zoomControl: true,
           styles: [
             // {elementType: 'geometry', stylers: [{color: '#E2DECB'}]}, //E2DECB background, A9A086 buildings
             // {elementType: 'labels.text.stroke', stylers: [{color: '#000000'}]},
@@ -98,7 +98,7 @@
             //   stylers: [{color: '#17263c'}]
             // }
           ]
-		    };
+        };
     map = new google.maps.Map(document.getElementById("map"), opts);
 
     //mylocation
