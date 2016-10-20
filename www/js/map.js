@@ -147,6 +147,9 @@
   }
 
   function updateBusLocation(Lat,Lng){
+      if (buslocation != null){
+          buslocation.setMap(null);
+      }
       buslocation =  new google.maps.Marker({
           title: "Bus Location",
           position: new google.maps.LatLng(Lat, Lng),
