@@ -1,0 +1,17 @@
+<ion-view view-title="{{location(id).Name}}">
+  <ion-content>
+    <ion-list>
+     <ion-item ng-if="timetable.length <= 1">
+	   Loading....
+	  </ion-item>
+	  <ion-item ng-if="timetable.length > 1" ng-repeat="stop in timetable | filter:{ LocationID: id}:true | orderBy:'stop.Time'">
+	   Run {{stop.RunNo}}<br> 
+	   <span>{{stop.Time | amParse:'HH:mm:ss' |  amDateFormat:'h:mma'}}</span>
+	   <div ng-if="inService()" class="floatright">
+	   	<button class="button button-small status" ng-if="isFuture == false"><p am-time-ago="stop.Time | amParse:'HH:mm:ss'"></button>
+        <button class="button button-small status button-assertive"><p am-time-ago="stop.Time | amParse:'HH:mm:ss'"></p></button>
+        </div>
+	  </ion-item>
+	</ion-list>
+  </ion-content>
+</ion-view>
