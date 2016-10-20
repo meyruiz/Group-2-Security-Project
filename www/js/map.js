@@ -146,6 +146,23 @@
     addpaths(data);
   }
 
+  function updateBusLocation(Lat,Lng){
+      buslocation =  new google.maps.Marker({
+          title: "Bus Location",
+          position: new google.maps.LatLng(Lat, Lng),
+          icon: 'img/busMarker.png'
+      });
+
+      var infowindow = new google.maps.InfoWindow({maxWidth: 400, zIndex: 999});
+      google.maps.event.addListener(map, 'click', function() {infowindow.close();});
+
+      google.maps.event.addListener(buslocation, 'click', (function() {
+          infowindow.setContent("Bus Location");
+          infowindow.open(map, buslocation);
+        }));
+        buslocation.setMap(map);
+  }
+
 
   function addmarkers(locations) {
       // clear markers
@@ -199,25 +216,11 @@
     }
   }
 
-  function dropmarker(){ // used for testing/admin outputs X,Y location to console on click. NBCSMap.dropmarker();
-      map.setCenter(new google.maps.LatLng(-33.776059,151.113467));
-      var draggablemarker = new google.maps.Marker({
-        draggable: true,
-        position: new google.maps.LatLng(-33.776059,151.113467),
-        map: map,
-        animation: google.maps.Animation.DROP,
-        title: "New Marker"
-      });
-      google.maps.event.addListener(draggablemarker, 'click', function (event) {
-        console.log('{"lat": ' + this.getPosition().lat() + ', "lng": ' + this.getPosition().lng() +'},');
-      });
-    }
-
-    function currentlocation(position) {
+  function currentlocation(position) {
       var campusBorder = new google.maps.Polygon({paths: campusCoords});
       var currentlocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       if(google.maps.geometry.poly.containsLocation(currentlocation, campusBorder)){
         google.maps.panTo(position.coords.latitude, position.coords.longitude);
       }
 
-    }
+  }

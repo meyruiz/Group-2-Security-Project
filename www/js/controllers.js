@@ -27,6 +27,7 @@ angular.module('starter.controllers', [])
     return stops[i];
   }
   $scope.nextStop = isNextStop(timetable); 
+  updateBusLocation(-33.77286630035477,151.11149289416505);
 })
 
 .controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory) {
