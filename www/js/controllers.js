@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
   updateBusLocation(-33.77286630035477,151.11149289416505); 
 })
 
-.controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory) {
+.controller('TimeTableCtrl', function($scope,$interval,$stateParams,TimeTableFactory,MarkersFactory) {
 
   var locations = MarkersFactory.locations();
   $scope.locations = locations;
@@ -58,8 +58,16 @@ angular.module('starter.controllers', [])
   var timetable = TimeTableFactory.timetable();
   $scope.timetable = timetable;
 
+  $scope.id = $stateParams.id;
+
   $interval(function(){
     $scope.timetable = timetable;
+    if(inService()){
+        $scope.inService = "";
+    }
+    else{
+        $scope.inService = "- Currently not In Service";
+    }
   },1000);
   // returns 
   $scope.location = function (id){
