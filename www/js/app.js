@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','angularMoment'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,6 +22,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       StatusBar.backgroundColorByHexString('#D6D2C4');
       StatusBar.styleDefault();
     }
+    $rootScope.CallTel = function(tel) {
+            window.location.href = 'tel:'+ tel;
+        }
   });
 })
 
