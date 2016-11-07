@@ -962,7 +962,7 @@ angular.module('starter.services', [])
    {
       "ID": 1,
       "Name":"Macquarie University Station",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7770040000",
       "Lng":"151.1176940000",
@@ -988,7 +988,7 @@ angular.module('starter.services', [])
    {
       "ID": 2,
       "Name":"EMC Building",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7749620000",
       "Lng":"151.1191750000",
@@ -1042,7 +1042,7 @@ angular.module('starter.services', [])
    {
       "ID": 3,
       "Name":"Macquarie University Hospital",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7734030000",
       "Lng":"151.1179410000",
@@ -1092,7 +1092,7 @@ angular.module('starter.services', [])
    {
       "ID": 4,
       "Name":"MGSM",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7716780000",
       "Lng":"151.1167560000",
@@ -1142,7 +1142,7 @@ angular.module('starter.services', [])
    {
       "ID": 5,
       "Name":"W19F",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7688690000",
       "Lng":"151.1111900000",
@@ -1176,7 +1176,7 @@ angular.module('starter.services', [])
    {
       "ID": 6,
       "Name":"MU Village Administration Office",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",
       "Lng":"151.1086500000",
@@ -1214,7 +1214,7 @@ angular.module('starter.services', [])
    {
       "ID": 7,
       "Name":"Dayman Place",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7722890000",
       "Lng":"151.1016870000",
@@ -1288,7 +1288,7 @@ angular.module('starter.services', [])
    {
       "ID": 8,
       "Name":"Y3A",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",
       "Lng":"151.1082610000",
@@ -1402,7 +1402,7 @@ angular.module('starter.services', [])
    {
       "ID": 9,
       "Name":"MUSE",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7736510000",
       "Lng":"151.1122920000",
@@ -1440,7 +1440,7 @@ angular.module('starter.services', [])
    {
       "ID": 10,
       "Name":"X8 Car Park",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7736979298",
       "Lng":"151.1097682338",
@@ -1558,7 +1558,7 @@ angular.module('starter.services', [])
    {
       "ID": 11,
       "Name":"University Avenue",
-      "Color": "#D6001C",
+      "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7769620000",
       "Lng":"151.1117990000",
