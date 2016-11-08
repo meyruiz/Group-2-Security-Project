@@ -30,6 +30,10 @@
     <access launch-external="yes" origin="tel:*" />
     <allow-intent href="tel:*" />
     <allow-navigation href="tel:*" />
+    <allow-intent href="*mq.edu.au/*" />
+    <allow-navigation href="*mq.edu.au/*" />
+    <allow-intent href="*co-hop.com.au/*" />
+    <allow-navigation href="*co-hop.com.au/*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />

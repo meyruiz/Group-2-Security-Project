@@ -19,7 +19,6 @@
           disableDefaultUI: true,
           zoomControl: true,
           styles: [
-            {elementType: 'geometry', stylers:[{color: '#D6D2C4'}]},
             {
               featureType: 'road',
               elementType: 'geometry',
