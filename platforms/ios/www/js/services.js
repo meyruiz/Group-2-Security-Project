@@ -1141,7 +1141,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 5,
-      "Name":"W19F",
+      "Name":"205a Cullonden Road",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7688690000",
@@ -1287,7 +1287,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 8,
-      "Name":"Y3A",
+      "Name":"10 Hadenfield Avenue",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",

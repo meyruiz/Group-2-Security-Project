@@ -47,7 +47,8 @@ angular.module('starter.controllers', [])
     }
     return $scope.location(stops[i].LocationID).Name;
   } 
-  updateBusLocation(-33.77286630035477,151.11149289416505); 
+
+  updateBusLocation(-33.7749620000,151.1191750000); 
 })
 
 .controller('TimeTableCtrl', function($scope,$interval,$stateParams,TimeTableFactory,MarkersFactory) {
