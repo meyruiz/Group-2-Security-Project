@@ -958,10 +958,12 @@ angular.module('starter.services', [])
 }])
 
 .factory('MarkersFactory', function() {
+    
    var Json = [
    {
       "ID": 1,
       "Name":"Macquarie University Station",
+      "Content":"<a href='/#/tab/map/1'>Info link</a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7770040000",

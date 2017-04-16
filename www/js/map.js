@@ -85,7 +85,7 @@
       buslocation =  new google.maps.Marker({
           title: "Bus Location",
           position: new google.maps.LatLng(Lat, Lng),
-          icon: 'img/busMarker.png'
+          icon: 'img/bus-2-48.png'
       });
 
       var infowindow = new google.maps.InfoWindow({maxWidth: 400, zIndex: 999});
@@ -107,9 +107,8 @@
       var marker, i;
       for (i = 0; i < locations.length; i++) {
           marker = new google.maps.Marker({
-          title: locations[i].Name,
-          position: new google.maps.LatLng(locations[i].Lat, locations[i].Lng),
-          icon: 'img/' + locations[i].Icon
+            title: locations[i].Name,
+            position: new google.maps.LatLng(locations[i].Lat, locations[i].Lng)
         });
 
       var infowindow = new google.maps.InfoWindow({maxWidth: 400, zIndex: 999});
@@ -117,10 +116,10 @@
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i].Name);
-          infowindow.open(map, marker);
+            infowindow.setContent(locations[i].Content);
+            infowindow.open(map, marker);
           }
-        })(marker, i));
+      })(marker, i));
 
         markers.push(marker);
         marker.setMap(map);

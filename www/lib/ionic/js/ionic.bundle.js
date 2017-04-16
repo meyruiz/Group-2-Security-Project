@@ -54661,6 +54661,15 @@ function($rootScope, $state, $location, $document, $ionicPlatform, $ionicHistory
   $rootScope.$ionicGoBack = function(backCount) {
     $ionicHistory.goBack(backCount);
   };
+    
+  /*$rootScope.$ionicGoBack = function (backCount) {
+      if($location.path() == '/#/tab/map/:id') {
+          $location.href('/#/tab/map');
+      } else {
+          $ionicHistory.goBack(backCount);
+          console.log("hey");
+      }
+  };*/
 
   // Set the document title when a new view is shown
   $rootScope.$on('$ionicView.afterEnter', function(ev, data) {
