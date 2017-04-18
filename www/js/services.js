@@ -989,7 +989,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 2,
-      "Name":"EMC Building",
+      "Name":"3 Innovation Rd (EMC Building)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7749620000",
@@ -1043,7 +1043,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 3,
-      "Name":"Macquarie University Hospital",
+      "Name":"3 Technology Pl (Macquarie University Hospital)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7734030000",
@@ -1093,7 +1093,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 4,
-      "Name":"MGSM",
+      "Name":"99 Talavera Rd (MGSM)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7716780000",
@@ -1177,7 +1177,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 6,
-      "Name":"MU Village Administration Office",
+      "Name":"Culloden Rd (MU Village Administration Office)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",
@@ -1215,7 +1215,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 7,
-      "Name":"Dayman Place",
+      "Name":"Epping Rd (Dayman Place)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7722890000",
@@ -1289,7 +1289,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 8,
-      "Name":"Y3A",
+      "Name":"Hadenfeld Ave (Y3A)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",
@@ -1441,7 +1441,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 10,
-      "Name":"X8 Car Park",
+      "Name":"Gymnasium Rd (X8 Car Park)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7736979298",
@@ -1559,7 +1559,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 11,
-      "Name":"University Avenue",
+      "Name":"Eastern Rd (University Avenue)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7769620000",
