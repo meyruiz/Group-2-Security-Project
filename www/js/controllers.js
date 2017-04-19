@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 
   $interval(function(){
       if(inService()){
-        $scope.nextStop = "Next Stop:  " + isNextStop(timetable);
+        $scope.nextStop = "Next Stop:  " + isNextStop(timetable, locations);
       }
       else{
         $scope.nextStop = "Currently not In Service";
@@ -39,15 +39,22 @@ angular.module('starter.controllers', [])
     return true; 
   }
 
-  function isNextStop(stops){
+  function isNextStop(stops, locations){
   for(var i = 0; i < stops.length; i++){
       if (moment(stops[i].Time,"HH:mm:ss").isAfter(new Date())){
         break;
       }
     }
+    
+    // Get location id based on current timetable stop
+    var id = stops[i].LocationID;
+    if (i == 1) {
+        updateBusLocation(locations[10].Lat,locations[10].Lng);
+    } else updateBusLocation(locations[id-1].Lat,locations[id-1].Lng);
+      
     return $scope.location(stops[i].LocationID).Name;
-  } 
-  updateBusLocation(-33.77286630035477,151.11149289416505); 
+      
+  }  
 })
 
 .controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory) {

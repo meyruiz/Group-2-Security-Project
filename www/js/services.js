@@ -15,17 +15,23 @@ angular.module('starter.services', [])
    {
       "LocationID":"1",
       "Time":"16:00:00",
-      "RunNo":"1"
+      "RunNo":"1",
+      "Lat":"-33.7770040000",
+      "Lng":"151.1176940000"
    },
    {
       "LocationID":"2",
       "Time":"16:02:00",
-      "RunNo":"1"
+      "RunNo":"1",
+      "Lat":"-33.7749620000",
+      "Lng":"151.1191750000"
    },
    {
       "LocationID":"3",
       "Time":"16:04:00",
-      "RunNo":"1"
+      "RunNo":"1",
+      "Lat":"-33.7734030000",
+      "Lng":"151.1179410000"
    },
    {
       "LocationID":"4",
@@ -675,12 +681,16 @@ angular.module('starter.services', [])
    {
       "LocationID":"1",
       "Time":"22:00:00",
-      "RunNo":"13"
+      "RunNo":"13",
+      "Lat":-33.7770040000,
+      "Lng":151.1176940000
    },
    {
       "LocationID":"2",
       "Time":"22:02:00",
-      "RunNo":"13"
+      "RunNo":"13",
+      "Lat":-33.7749620000,
+      "Lng":151.1191750000
    },
    {
       "LocationID":"3",
