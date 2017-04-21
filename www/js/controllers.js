@@ -28,6 +28,15 @@ angular.module('starter.controllers', [])
       }
     }
   }
+  
+  $scope.back = function() {
+    var backView = $ionicHistory.backView(); 
+    console.log("hey");
+    console.log(backView);
+    if (backView && backView.stateName) {
+      backView.go()
+    }
+   }
 
   function inService(){
     var day = moment().format('ddd')
@@ -57,13 +66,15 @@ angular.module('starter.controllers', [])
   }  
 })
 
-.controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory) {
+.controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory, $state, $stateParams) {
 
   var locations = MarkersFactory.locations();
   $scope.locations = locations;
 
   var timetable = TimeTableFactory.timetable();
   $scope.timetable = timetable;
+    
+  $scope.id = $stateParams.id;
 
   $interval(function(){
     $scope.timetable = timetable;

@@ -55,16 +55,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
       }
     }
   })
-  
-.state('tab.sub', {
-    url:'/map/:id',
-     views: {
-        'tab-timetable': {
-            controller: 'TimeTableCtrl',
-            templateUrl: 'templates/location.html'
-        }
-    }
-})
 
   .state('tab.timetable', {
       url: '/timetable',
@@ -77,12 +67,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     })
 
   .state('tab.location',{
-        url:'/timetable/:id',
+        url:'/timetable/{id}',
         views: {
           'tab-timetable': {
             controller: 'TimeTableCtrl',
             templateUrl: 'templates/location.html'
           }
+        },
+        params: {
+            id: 1
         }
       })
 
