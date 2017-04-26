@@ -972,7 +972,7 @@ angular.module('starter.services', [])
    var Json = [
    {
       "ID": 1,
-      "Name":"Macquarie University Station",
+      "Name":"Waterloo Rd (Macquarie University Station)",
       "Content":"<a href='/#/tab/map/1'>Info link</a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
@@ -1153,7 +1153,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 5,
-      "Name":"W19F",
+      "Name":"Colloden Rd (W19F)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7688690000",
@@ -1187,7 +1187,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 6,
-      "Name":"Culloden Rd (MU Village Administration Office)",
+      "Name":"122 Culloden Rd (MU Village Administration Office)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",
@@ -1225,7 +1225,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 7,
-      "Name":"Epping Rd (Dayman Place)",
+      "Name":"Vimiera Rd (Dayman Place)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7722890000",
@@ -1299,7 +1299,7 @@ angular.module('starter.services', [])
    },
    {
       "ID": 8,
-      "Name":"Hadenfeld Ave (Y3A)",
+      "Name":"10 Hadenfeld Avenue (Y3A)",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",
