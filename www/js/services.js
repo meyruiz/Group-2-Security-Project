@@ -973,7 +973,7 @@ angular.module('starter.services', [])
    {
       "ID": 1,
       "Name":"Waterloo Rd (Macquarie University Station)",
-      "Content":"<a href='/#/tab/map/1'>Info link</a>",
+      "Content":"<a href='/#/tab/timetable/1' style='text-decoration: none' ><b>Macquarie University Station</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7770040000",
@@ -1000,6 +1000,7 @@ angular.module('starter.services', [])
    {
       "ID": 2,
       "Name":"3 Innovation Rd (EMC Building)",
+	  "Content":"<a href='/#/tab/timetable/2' style='text-decoration: none' ><b>EMC Building</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7749620000",
@@ -1054,6 +1055,7 @@ angular.module('starter.services', [])
    {
       "ID": 3,
       "Name":"3 Technology Pl (Macquarie University Hospital)",
+	  "Content":"<a href='/#/tab/timetable/3' style='text-decoration: none' ><b>Macquarie University Hospital</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7734030000",
@@ -1104,6 +1106,7 @@ angular.module('starter.services', [])
    {
       "ID": 4,
       "Name":"99 Talavera Rd (MGSM)",
+	  "Content":"<a href='/#/tab/timetable/4' style='text-decoration: none' ><b>MGSM</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7716780000",
@@ -1154,6 +1157,7 @@ angular.module('starter.services', [])
    {
       "ID": 5,
       "Name":"Colloden Rd (W19F)",
+	  "Content":"<a href='/#/tab/timetable/5' style='text-decoration: none' ><b>W19F</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7688690000",
@@ -1188,6 +1192,7 @@ angular.module('starter.services', [])
    {
       "ID": 6,
       "Name":"122 Culloden Rd (MU Village Administration Office)",
+	  "Content":"<a href='/#/tab/timetable/6' style='text-decoration: none' ><b>MU Village Administration Office</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",
@@ -1226,6 +1231,7 @@ angular.module('starter.services', [])
    {
       "ID": 7,
       "Name":"Vimiera Rd (Dayman Place)",
+	  "Content":"<a href='/#/tab/timetable/7' style='text-decoration: none' ><b>Dayman Place</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7722890000",
@@ -1300,6 +1306,7 @@ angular.module('starter.services', [])
    {
       "ID": 8,
       "Name":"10 Hadenfeld Avenue (Y3A)",
+	  "Content":"<a href='/#/tab/timetable/8' style='text-decoration: none' ><b>Y3A</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7765070000",
@@ -1415,6 +1422,7 @@ angular.module('starter.services', [])
       "ID": 9,
       "Name":"MUSE",
       "Color": "#FF8200",
+	  "Content":"<a href='/#/tab/timetable/9' style='text-decoration: none' ><b>MUSE</b></a>",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7736510000",
       "Lng":"151.1122920000",
@@ -1452,6 +1460,7 @@ angular.module('starter.services', [])
    {
       "ID": 10,
       "Name":"Gymnasium Rd (X8 Car Park)",
+	  "Content":"<a href='/#/tab/timetable/10' style='text-decoration: none' ><b>X8 Car Park</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7736979298",
@@ -1570,6 +1579,7 @@ angular.module('starter.services', [])
    {
       "ID": 11,
       "Name":"Eastern Rd (University Avenue)",
+	  "Content":"<a href='/#/tab/timetable/11' style='text-decoration: none' ><b>University Avenue</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7769620000",

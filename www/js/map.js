@@ -117,6 +117,7 @@
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
             infowindow.setContent(locations[i].Content);
+
             infowindow.open(map, marker);
           }
       })(marker, i));
