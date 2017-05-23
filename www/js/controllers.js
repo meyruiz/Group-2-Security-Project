@@ -31,7 +31,6 @@ angular.module('starter.controllers', [])
   
   $scope.back = function() {
     var backView = $ionicHistory.backView(); 
-    console.log("hey");
     console.log(backView);
     if (backView && backView.stateName) {
       backView.go()
@@ -99,6 +98,17 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('AboutCtrl', function($scope) {
- 
+.controller('AboutCtrl', function($scope, $ionicPopup) {
+ // A confirm dialog
+   $scope.showConfirm = function() {
+     var confirmPopup = $ionicPopup.confirm({
+       title: 'Co-Hop',
+       template: 'Are you sure you want to go to Co-Hop app?'
+     });
+     confirmPopup.then(function(res) {
+       if(res) {
+         window.location.replace("https://itunes.apple.com/ca/app/co-hop-rideshare/id1164508588?mt=8");
+       } 
+     });
+   };
 });
