@@ -1,0 +1,51 @@
+
+<ion-view view-title="Welcome">
+
+<style>
+  .button {
+    background-color: #008CBA; 
+    border: none;
+    border-radius: 8px;
+    color: white;
+    top:70%;
+    width:30%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+  .button:hover {
+    
+    background-color:maroon;
+    color: white;
+}
+
+ .background {
+    height: 100%;
+    width: 100%;
+    background: url("img/splash.gif"),
+    no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+</style>
+
+
+  <div class="background">
+  <center><ion-content><br>
+   
+  <p style="position: fixed; color:white; bottom: 0; width:100%; text-align: center"> By students, for students( and staffs, maybe)
+            </p>
+            
+ 
+  <button class="button" ng-click="toMap()">Get Started</button>
+  </ion-content></center>
+  
+  </div>
+  
+  
+</ion-view>
