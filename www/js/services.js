@@ -973,7 +973,7 @@ angular.module('starter.services', [])
    {
       "ID": 1,
       "Name":"Waterloo Rd (Macquarie University Station)",
-      "Content":"<a href='/#/tab/timetable/1' style='text-decoration: none' ><b>Macquarie University Station</b></a>",
+      "Content":"<a href='/#/tab/timetable/1' style='text-decoration: none' ><b>MU Station</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7770040000",
@@ -1055,7 +1055,7 @@ angular.module('starter.services', [])
    {
       "ID": 3,
       "Name":"3 Technology Pl (Macquarie University Hospital)",
-	  "Content":"<a href='/#/tab/timetable/3' style='text-decoration: none' ><b>Macquarie University Hospital</b></a>",
+	  "Content":"<a href='/#/tab/timetable/3' style='text-decoration: none' ><b>MU Hospital</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7734030000",
@@ -1192,7 +1192,7 @@ angular.module('starter.services', [])
    {
       "ID": 6,
       "Name":"122 Culloden Rd (MU Village Administration Office)",
-	  "Content":"<a href='/#/tab/timetable/6' style='text-decoration: none' ><b>MU Village Administration Office</b></a>",
+	  "Content":"<a href='/#/tab/timetable/6' style='text-decoration: none' ><b>MU Village</b></a>",
       "Color": "#FF8200",
       "Icon" : "magentaMarker.png",
       "Lat":"-33.7705040000",

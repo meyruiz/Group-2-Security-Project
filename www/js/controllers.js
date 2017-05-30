@@ -60,7 +60,7 @@ angular.module('starter.controllers', [])
         updateBusLocation(locations[10].Lat,locations[10].Lng);
     } else updateBusLocation(locations[id-1].Lat,locations[id-1].Lng);
     
-    var nextStop= $scope.location(stops[i].LocationID).Name + " " +moment(stops[i].Time,"HH:mm:ss").fromNow();
+    var nextStop= $scope.location(stops[i].LocationID).Content + " " +moment(stops[i].Time,"HH:mm:ss").fromNow();
 
     return nextStop;
       

@@ -38,6 +38,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
   $stateProvider
 
   // setup an abstract state for the tabs directive
+    
+    .state('intro', {
+    url: '/',
+    templateUrl: 'templates/intro.html',
+    controller: 'IntroCtrl'
+    })
+    
     .state('tab', {
     url: '/tab',
     abstract: true,
@@ -46,6 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
 
   // Each tab has its own nav history stack:
 
+   
 
   .state('tab.map', {
     url: '/map',
@@ -88,7 +96,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/map');
+  $urlRouterProvider.otherwise('/');
 
 })
 
