@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 
   $interval(function(){
       if(inService()){
-        $scope.nextStop = "Next Stop:  " + isNextStop(timetable, locations);
+        $scope.nextStop = "Next Stop:  " + isNextStop(timetable, locations) +" "+stopsTime(timetable, locations);
       }
       else{
         $scope.nextStop = "Currently not In Service";
@@ -63,6 +63,23 @@ angular.module('starter.controllers', [])
     return $scope.location(stops[i].LocationID).Name;
       
   }  
+
+
+function stopsTime (stops, locations){
+  for(var i = 0; i < stops.length; i++){
+      if (moment(stops[i].Time,"HH:mm:ss").isAfter(new Date())){
+        break;
+      }
+    }
+  var id = stops[i].LocationID;
+    if (i == 1) {
+        updateBusLocation(locations[10].Lat,locations[10].Lng);
+    } else updateBusLocation(locations[id-1].Lat,locations[id-1].Lng);
+    
+    var Time =stops[i].Time;
+    return moment(Time,"HH:mm:ss").fromNow();
+
+  }
 })
 
 .controller('TimeTableCtrl', function($scope,$interval,TimeTableFactory,MarkersFactory, $state, $stateParams) {
@@ -111,4 +128,24 @@ angular.module('starter.controllers', [])
        } 
      });
    };
-});
+})
+
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+ 
+  // Called to navigate to the main app
+  $scope.toMap = function() {
+    $state.go('tab.map');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+})
+;

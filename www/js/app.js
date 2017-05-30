@@ -46,6 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
 
   // Each tab has its own nav history stack:
 
+
   .state('tab.map', {
     url: '/map',
     views: {
@@ -98,3 +99,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
     })
   }
 });
+
