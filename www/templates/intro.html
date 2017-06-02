@@ -1,51 +1,58 @@
-
 <ion-view view-title="Welcome">
 
-<style>
-  .button {
-    background-color: #008CBA; 
-    border: none;
-    border-radius: 8px;
-    color: white;
-    top:70%;
-    width:30%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-  .button:hover {
-    
-    background-color:maroon;
-    color: white;
-}
-
- .background {
+  <style>
+    .background #main-img{
+    display: table;
     height: 100%;
     width: 100%;
-    background: url("img/splash.gif"),
-    no-repeat center center ; 
+    position: absolute;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
-  }
-</style>
-
-
-  <div class="background">
-  <center><ion-content><br>
+    -o-background-size: cover;
    
-  <p style="position: fixed; color:white; bottom: 0; width:100%; text-align: center"> By students, for students( and staffs, maybe)
-            </p>
-            
- 
-  <button class="button" ng-click="toMap()">Get Started</button>
-  </ion-content></center>
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (min-width: 0px)and (max-width: 360px)  {   
+    #main-img{
+    	background-image: url("img/splash.gif");
+    } 
+}
+
+@media only screen and (min-width: 361px) {      
+    #main-img{        
+      background-image: url("img/introDesktop.png");
+    } 
+}
+
+  </style>
+
   
+<div class="background">    
+ 
+  
+  <ion-content scroll="false">
+
+  <span id="main-img"/>
+  
+  <p style="text-align:center; margin: 5%"> Space reserved for awesome introduction</p>
+	
+  
+  <div class="intro">
+    
+  <button class="introButton"  ng-click="toMap()">Get Started</button> 
+  <br><br>
+
+  <p style="color:white"> By students, for students </p>
+   
   </div>
+  
+
+  </ion-content>
+ 
+   
+</div>
   
   
 </ion-view>

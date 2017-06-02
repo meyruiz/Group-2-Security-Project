@@ -93,6 +93,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
         controller: 'AboutCtrl'
       }
     }
+  })
+   .state('tab.security', {
+    url: '/security',
+    views: {
+      'tab-security': {
+        templateUrl: 'templates/tab-security.html',
+        controller: 'AboutCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

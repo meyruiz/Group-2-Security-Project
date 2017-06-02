@@ -1,24 +1,50 @@
 <ion-view view-title="About">
 
-
-
-
-
-  <center><ion-content><br>
-  <img style="max-width:80%;" src="img/MQULogo.png">
-  <h3 style="color: maroon; ">Co-Hop and make a difference</h3>
-  
+  <style>
+    .logo{
+      display: block;
+      margin: auto;
+      max-width: 50%;
+      position: relative;
+      text-align:center; 
+     
+    }
+    .aboutContent{
+     margin: 5%;
+      text-align:center; 
  
-  
+    }
+    
+    .appleStore{
+      display: block;
+      margin: 5% auto;
+      position: relative;
+      text-align:center; 
+    }
 
+  </style>
+
+
+
+  <ion-content >
+
+  
+  <img class="logo" src="img/MQULogo.png">
+  
+  <div class="aboutContent">
+
+  <h2 style="color: maroon; "><b>CO-HOP AND MAKE A DIFFERENCE</b></h2>
+  
   <p style="text-align:justify; margin: 5%"> Co-Hop makes it simple to arrange safe, friendly car pooling and ride sharing to and from the Macquarie Park area. 
      It helps you find people local to you who can easily fit into your travel times and the way you want to communicate.</p>
+  </div>
+
 	 
-	 
-  
-  <a ng-click="showConfirm()"><img src="https://ridesharkdata.rideshark.com/Graphics/Icons/AppStore/ios-app-badge.png" alt="Download on the App Store"></a>
-  
-  </ion-content></center>
+  <div class="appleStore">
+  <a1 ng-click="showConfirm()"><img class="appleStore" src="https://ridesharkdata.rideshark.com/Graphics/Icons/AppStore/ios-app-badge.png" alt="Download on the App Store"></a1>
+  </div>
+
+  </ion-content>
   
   
   
